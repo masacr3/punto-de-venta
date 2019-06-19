@@ -1,0 +1,209 @@
+body{
+  background-color: #2f313d;
+  color: #cfd2da;
+  padding-top: 50px;
+  min-width: 1024ox;
+}
+
+ul{
+  padding-top: 10px;
+}
+
+li{
+  width: 90%;
+}
+
+.mibody{
+  min-width: 1024;
+  max-width: 1200;
+}
+
+.medio{
+  height: 580px;
+  min-width: 500px;
+  overflow: auto;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.fondo{
+  background-color: #2f313d;
+}
+
+.cbl{
+    margin-left: 15%;
+}
+
+.limits{
+    border-style: solid;
+}
+
+.focusme{
+  /*background-color:#00446D;*/
+  background-color: #2B2957;
+  /*background-color: #1F3E4F;*/
+}
+
+.cardTotal{
+  height: 100px;
+}
+
+.opacar{
+  color: #434857;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.total{
+  position: relative;
+  width: 150px;
+  top:30%;
+  left:20%;
+}
+
+.pp{
+  width: 100%;
+}
+
+.ppimg{
+  width: 50px;
+  height: 50px;
+}
+
+.no-padd{
+  padding-bottom: 0;
+}
+
+.hiden{
+  overflow: hidden;
+}
+
+
+.codb{
+  position: relative;
+  top:0;
+  left: 0;
+}
+
+.tacho{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 50%;
+}
+
+.mm{
+    margin-left: 3px;
+}
+
+input[type="text"]{
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  outline: none;
+  color: orange;
+  font-size: 12px;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: all 0.2s linear;
+  transform: translate(10px, 0);
+  opacity: 0;
+}
+
+hr{
+   display: block;
+   unicode-bidi: isolate;
+   margin-block-start: 0.5em;
+   margin-block-end: 0.5em;
+   margin-inline-start: auto;
+   margin-inline-end: auto;
+   overflow: hidden;
+   border-style: inset;
+   border-width: 1px;
+}
+
+.lp-20{
+  padding-left: 20px;
+}
+
+.lp-60{
+  padding-left: 60px;
+}
+
+.tp-60{
+  padding-top: 60px;
+}
+
+.offme{
+  padding: 0;
+  margin: 0;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.rotarImagen img{
+  transition: all 0.5s;
+}
+
+
+.rotarImagen img:hover{
+  transform: rotate(-90deg);
+}
+
+/*mios*/
+
+.hideme{
+  display: none;
+}
+
+#flash{
+  position: relative;
+  top: 0;
+  padding: 10px;
+  margin-left: 15px;
+  width: 200px;
+  box-sizing:  border-box;
+  background: #dc3545;
+  text-align: center;
+}
+
+#flash::before{
+  content: '';
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #dc3545;
+}
+
+
+/* selectores personalizados para busqueda */
+
+.cantidad, .precio, .subtotal, .total{
+
+}
