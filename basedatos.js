@@ -1,26 +1,38 @@
-var cocacola = {
-  'id':1,
-  'marca':'Coca cola',
-  'descripcion':'2l ',
-  'precio':105
-}
-
-var pepsi = {
-  'id':2,
-  'marca':'pepsi',
-  'descripcion':'2l retornable',
-  'precio':50
-}
-
-var ala = {
-  'id':3,
-  'marca':'ala',
-  'descripcion':'arroz 500g',
-  'precio':30
-}
-
 var articulos = {
-  1 : cocacola,
-  2 : pepsi,
-  3 : ala
+
+  '7793100111556' :
+  {
+    'id' : '7793100111556',
+    'marca' : 'colgate',
+    'descripcion' : 'pasta dental 70g',
+    'preciounitario' : 35,
+    'precio' : 49
+  },
+
+  '7791579001132' :
+  {
+    'id' : '7791579001132',
+    'marca' : 'molto',
+    'descripcion' : 'pure tomate 520g',
+    'preciounitario' : 22,
+    'precio' : 30
+  },
+
+  '7790387010305':
+  {
+    'id' : '7790387010305',
+    'marca' : 'taragui',
+    'descripcion' : 'te saquitos 25u',
+    'preciounitario' : 26,
+    'precio' : 39
+  },
+
+  '7790411000050':
+  {
+    'id' : '7790411000050',
+    'marca' : 'rosamonte',
+    'descripcion' : 'yerba 500g',
+    'preciounitario' : 59,
+    'precio' : 75
+  }
 }

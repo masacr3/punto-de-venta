@@ -81,6 +81,14 @@ function getCant(id){
   return parseFloat( $('#'+ id +' .cantidad').text() )
 }
 
+function getTOTAL(){
+  return parseFloat( $('.TOTAL').text())
+}
+
+function setTOTAL(value){
+  $('.TOTAL').text(value)
+}
+
 function setPrecio(id, value){
   $('#'+id+' .precio').text(value)
 }
@@ -107,18 +115,23 @@ function agregarAlGrid(producto){
   setPrecio(producto.id, producto.precio)
   setSubtotal(producto.id, producto.precio)
 
+  nuevototal = getTOTAL() + parseFloat(producto.precio)
+
   gridInsertar(nuevoProducto)
+  setTOTAL(nuevototal)
 }
 
 function actualizarGrid(id,cantidad,agregar){
 
   nuevaCantidad = agregar ? getCant(id) + parseFloat(cantidad) : getCant(id) - parseFloat(cantidad)
   nuevoSubtotal = getPrecio(id) * nuevaCantidad
-
+  nuevototal = agregar ? getTOTAL() + getPrecio(id) * cantidad : getTOTAL() - getPrecio(id) * cantidad
   console.log('nuevaCantidad->'+nuevaCantidad)
   console.log('nuevoSubtotal->'+nuevoSubtotal)
+  console.log('nuevoTOTAL->'+nuevototal)
   setCantidad(id, nuevaCantidad)
   setSubtotal(id, nuevoSubtotal)
+  setTOTAL(nuevototal)
 
 }
 
@@ -171,41 +184,22 @@ $(document).ready(function(){
 
 
   //test
-  $('#bt1').on('click', function(){
-    var cantidad = $('#'+ curr +' .cantidad') // span
-    var precio = $('#'+ curr +' .precio') //span
-    var subtotal = $('#'+ curr +' .subtotal') //span
-
-    var nuevaCantidad = parseFloat( cantidad.text() ) + 1
-
-    var nuevoSubtotal = parseFloat(subtotal.text()) + parseFloat( precio.text() )
-
-    cantidad.text(nuevaCantidad)
-    subtotal.text(nuevoSubtotal)
-  })
-
   $('#flash').on('click', function(){
     $(this).addClass('hideme')
   })
 
-  $('#bt2').on('click', function(){
+  $('#borrar').on('click', function(){
 
-    var cantidad = $('#'+ curr +' .cantidad') // span
-    var precio = $('#'+ curr +' .precio') //span
-    var subtotal = $('#'+ curr +' .subtotal') //span
+    if (curr == 0) return
 
-    var nuevaCantidad = parseFloat( cantidad.text() ) - 1
-
+    actualizarGrid(curr,1,false)
+    nuevaCantidad = getCant(curr)
     if (nuevaCantidad == 0){
       $('#'+ curr).remove()
       curr = 0
       return
     }
 
-    var nuevoSubtotal = parseFloat(subtotal.text()) - parseFloat( precio.text() )
-
-    cantidad.text(nuevaCantidad)
-    subtotal.text(nuevoSubtotal)
   })
 
 });
